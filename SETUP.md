@@ -34,6 +34,7 @@ minikube start
 Create a cluster in GKE
 
 @see https://cloud.google.com/kubernetes-engine/docs/how-to/load-balance-ingress
+
 @see https://cloud.google.com/kubernetes-engine/docs/concepts/ingress
 
 ```bash
@@ -135,7 +136,9 @@ helm upgrade -i -f prod/simple-app/values.yaml simple-app prod/simple-app/
 
 ## Simple app template
 
-A simple App Template can be found [here](https://github.com/reisraff/apps)
+A simple App Template can be found [here](https://github.com/reisraff/apps/tree/c403638ba1a6495274b535537d2f49a486bbb30b)
+
+May the the actual chart version does not work anymore with this simple app
 
 ## Crossplane
 

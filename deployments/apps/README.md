@@ -27,7 +27,7 @@ kubectl create secret generic regcred -n $NAMESPACE \
 
 On argocd in the `Settings >> Repositories` add the repository of the `apps` and its credentials.
 
-Create a "project" on argocd with the same name as [deployments/apps/application.yml:22](https://github.com/reisraff/helm-charts/blob/main/deployments/apps/application.yml#L22)
+Create a "project" on argocd with the same name as [deployments/apps/application.yaml:22](https://github.com/reisraff/helm-charts/blob/main/deployments/apps/application.yaml#L22)
 
 And this project have to have configured the sections: "SOURCE REPOSITORIES", "DESTINATIONS" and "CLUSTER RESOURCE ALLOW LIST" allowing this deployment.
 

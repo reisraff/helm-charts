@@ -40,5 +40,5 @@ kubectl create secret generic awssm-secret --from-file=./access-key --from-file=
 Change the the variables in the `external-secrets-{gcp|aws}.yaml` and apply it to ks8
 
 ```bash
-kubectl apply -f /path/to/deployer.git/external-secrets/external-secrets.yaml
+kubectl apply -f external-secrets-{gcp|aws}.yaml
 ```

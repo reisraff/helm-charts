@@ -10,4 +10,6 @@ kubectl apply -k apps/
 
 ## Apply the `external-secrets`
 
+```
 kubectl apply -f external-secrets/external-secrets-{gcp|aws}.yaml
+```

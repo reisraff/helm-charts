@@ -9,7 +9,7 @@ metadata:
     app: {{ .Values.name }}
     env: {{ .Values.environment }}
 spec:
-  {{- if .suspended }}
+  {{- if .Values.suspended }}
   suspend: true
   {{- end }}
   schedule: {{ .Values.schedule | squote }}

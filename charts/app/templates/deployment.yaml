@@ -69,6 +69,19 @@ spec:
           failureThreshold: {{ .Values.livenessProbe.failureThreshold | default 3 }}
         {{- end }}
         {{- end }}
+        {{- if .Values.readinessProbe }}
+        {{- if .Values.readinessProbe.enabled }}
+        readinessProbe:
+          httpGet:
+            path: {{ .Values.readinessProbe.httpPath | default "/" }}
+            port: http
+          initialDelaySeconds: {{ .Values.readinessProbe.initialDelaySeconds | default 30 }}
+          periodSeconds: {{ .Values.readinessProbe.periodSeconds | default 10 }}
+          successThreshold: {{ .Values.readinessProbe.successThreshold | default 1 }}
+          timeoutSeconds: {{ .Values.readinessProbe.timeoutSeconds | default 3 }}
+          failureThreshold: {{ .Values.readinessProbe.failureThreshold | default 3 }}
+        {{- end }}
+        {{- end }}
         {{- if .Values.resources }}
         resources:
 {{ toYaml .Values.resources | indent 10 }}
